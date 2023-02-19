@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orquestator-mfe
+  labels:
+    app: orquestator-mfe
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orquestator-mfe
+  template:
+    metadata:
+      labels:
+        app: orquestator-mfe
+    spec:
+      containers:
+      - name: orquestator-mfe
+        image: "acrfernandor.azurecr.io/microfrontend/orquestator-mfe:#{Build.BuildNumber}#"
+        ports:
+        - containerPort: 9000
+      imagePullSecrets:
+        - name: fernandosecretnew
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: orquestator-mfe
+  labels:
+    app: orquestator-mfe
+spec:
+  selector:
+    app: orquestator-mfe
+
+  type: LoadBalancer
+  ports:
+  - port: 9000 
+    targetPort: 9000
+
+  

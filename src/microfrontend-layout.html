@@ -1,0 +1,32 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+-->
+
+ <!-- Etiqueta nav sirve para definir header y footer, o menus de navegación que se presentaran en todos los MFE --> 
+  <nav>
+    <application name="@quind/navbars"></application>
+  </nav>
+  <main>
+    <route path="home">
+      <application name="@quind/home"></application>
+    </route>
+  </main>
+  <route path="us">
+    <application name="@quind/us"></application>
+  </route> 
+  
+</single-spa-router>
