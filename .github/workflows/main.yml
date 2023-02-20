@@ -11,8 +11,12 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    
+    - name: Checkout
+      uses: actions/checkout@v3.3.0
+      with:
+        repository:  ${{ github.repository }}
+        ref: feature/frontend-flow
+
     - name: Setup Node.js environment
       uses: actions/setup-node@v3.6.0
       with:
