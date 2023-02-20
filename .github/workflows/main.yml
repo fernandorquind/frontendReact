@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: variable_example
-      run: echo "$NAME_PROPERTY"
+      run: echo {{vars.NAME_PROPERTY}}
       
     - name: Checkout
       uses: actions/checkout@v3.3.0
