@@ -35,7 +35,7 @@ jobs:
         # Artifact name
         name: artifact node
         # A file, directory or wildcard pattern that describes what to upload
-        path: ${{ GITHUB_ACTION_PATH }}/dist
+        path: $GITHUB_ACTION_PATH/dist
         # The desired behavior if no files are found using the provided path.
     
 
