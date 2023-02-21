@@ -23,27 +23,27 @@ jobs:
       uses: actions/checkout@v3.3.0
       with:
         repository: f2x-flypass/pipeline-templates 
-        ref: main/.github/workflows/build/
+        ref: main
+        path: '.github/workflows/build'
 
-
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v3.6.0
-      with:
-       node-version: '14'
-    - run: npm i
-      name: instalacion_de_dependencias
-    - run: npm run build
+    #- name: Setup Node.js environment
+    #  uses: actions/setup-node@v3.6.0
+    #  with:
+    #   node-version: '14'
+    # - run: npm i
+    #  name: instalacion_de_dependencias
+    # - run: npm run build
     #- run: npm test
-    - run: tree $GITHUB_ACTION_PATH
+    #- run: tree $GITHUB_ACTION_PATH
     
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v3.1.2
-      with:
+    #- name: Upload a Build Artifact
+    #  uses: actions/upload-artifact@v3.1.2
+    #  with:
         # Artifact name
-        name: artifact node
+    #    name: artifact node
         # A file, directory or wildcard pattern that describes what to upload
-        path: |
-          dist
+    #    path: |
+    #      dist
         # The desired behavior if no files are found using the provided path.
     
 
