@@ -19,6 +19,12 @@ jobs:
       with:
         repository:  ${{ github.repository }}
         ref: feature/frontend-flow
+    - name: Checkout_dos
+      uses: actions/checkout@v3.3.0
+      with:
+        repository: f2x-flypass/pipeline-templates 
+        ref: main/.github/workflows/build/
+
 
     - name: Setup Node.js environment
       uses: actions/setup-node@v3.6.0
