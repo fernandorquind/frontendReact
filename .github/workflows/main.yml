@@ -25,6 +25,7 @@ jobs:
       with:
        node-version: '14'
     - run: npm i
+      name: instalacion_de_dependencias
     - run: npm run build
     #- run: npm test
     - run: tree $GITHUB_ACTION_PATH
