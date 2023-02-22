@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: variable_example
-      run: echo ${{ vars.NAME_PROPERTY }}
+      run: echo ${{ github.ref_name }}
       
     #- name: Checkout
     # uses: actions/checkout@v3.3.0
@@ -20,12 +20,12 @@ jobs:
     #    repository:  ${{ github.repository }}
     #    ref: feature/frontend-flow
     
-    - name: Checkout_dos
-      uses: actions/checkout@v3.3.0
-      with:
-        repository: f2x-flypass/pipeline-templates 
-        ref: main
-        path: '.github/workflows/build'
+    #- name: Checkout_dos
+    #  uses: actions/checkout@v3.3.0
+    #  with:
+    #    repository: f2x-flypass/pipeline-templates 
+    #    ref: main
+    #    path: '.github/workflows/build'
 
     #- name: Setup Node.js environment
     #  uses: actions/setup-node@v3.6.0
