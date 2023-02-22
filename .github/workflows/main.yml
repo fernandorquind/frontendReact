@@ -1,10 +1,9 @@
 name: Node.js CI
 
 on:
-  repository_dispatch:
-    types:
-      - manual-trigger-mytest
-      - manual-trigger-all
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, closed]
 jobs:
   build:
 
