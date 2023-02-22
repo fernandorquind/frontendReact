@@ -1,7 +1,8 @@
 name: Node.js CI
 
 on:
-
+  branch_protection_rule:
+    types: [created, deleted]
 jobs:
   build:
 
