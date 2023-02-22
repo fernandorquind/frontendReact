@@ -14,11 +14,12 @@ jobs:
     - name: variable_example
       run: echo ${{ vars.NAME_PROPERTY }}
       
-    - name: Checkout
-      uses: actions/checkout@v3.3.0
-      with:
-        repository:  ${{ github.repository }}
-        ref: feature/frontend-flow
+    #- name: Checkout
+    # uses: actions/checkout@v3.3.0
+    #  with:
+    #    repository:  ${{ github.repository }}
+    #    ref: feature/frontend-flow
+    
     - name: Checkout_dos
       uses: actions/checkout@v3.3.0
       with:
