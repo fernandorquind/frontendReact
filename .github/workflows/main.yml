@@ -19,6 +19,7 @@ jobs:
       with:
        repository:  ${{ github.repository }}
        ref: feature/frontend-flow-1
+       paths: .github/workflows/main.yml
     
     #- name: Checkout_dos
     #  uses: actions/checkout@v3.3.0
