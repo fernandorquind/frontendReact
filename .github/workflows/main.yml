@@ -1,8 +1,8 @@
 name: Node.js CI
 
 on:
-  check_suite:
-    types: [completed]
+  pull_request:
+    types: [opened, reopened]
 jobs:
   build:
 
