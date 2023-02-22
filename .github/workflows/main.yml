@@ -1,8 +1,10 @@
 name: Node.js CI
 
 on:
-  pull_request:
-    types: [opened, reopened]
+  repository_dispatch:
+    types:
+      - manual-trigger-mytest
+      - manual-trigger-all
 jobs:
   build:
 
