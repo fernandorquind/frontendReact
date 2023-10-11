@@ -1,0 +1,12 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  frontend-react:
+    name: frontend-react
+    uses: fernandorquind/pipeline-template/.github/workflows/main_frontend.yml@main
