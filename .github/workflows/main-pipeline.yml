@@ -12,4 +12,4 @@ permissions:
 jobs:
   frontend-react:
     name: frontend-react
-    uses: fernandorquind/pipeline-template/.github/workflows/main_frontend.yml@main
+    uses: fernandorquind/pipeline-template/.github/workflows/main_frontend.yml@duvanmain
